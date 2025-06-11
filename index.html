@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -6,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>กำลังพาไปยัง Shopee...</title>
 
-  <!-- Facebook Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -17,14 +15,15 @@
     s.parentNode.insertBefore(t,s)}(window, document,
     'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '127978927946856');
+    fbq('init', '127978927946856'); // <-- แก้ไข FB Pixel ID ของคุณตรงนี้
     fbq('track', 'Purchase');
   </script>
 
   <script>
     setTimeout(() => {
-      window.location.href = "https://s.shopee.co.th/AKOagu4bM0";
-    }, 800); // Delay for pixel firing
+      // อัปเดตลิงก์ตรงนี้
+      window.location.href = "https://s.shopee.co.th/6AZAZjEvs9";
+    }, 800); // หน่วงเวลาเพื่อให้ Pixel ทำงาน
   </script>
 
   <style>
@@ -39,12 +38,26 @@
       background: #fff;
       color: #333;
     }
+    .loader {
+      border: 5px solid #f3f3f3; /* สีเทาอ่อน */
+      border-top: 5px solid #f97300; /* สีส้ม Shopee */
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
     h1 {
       font-size: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 <body>
+  <div class="loader"></div>
   <h1>กำลังพาคุณไปยังหน้าสินค้า Shopee...</h1>
 </body>
 </html>
