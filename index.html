@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>กำลังพาไปยัง Shopee...</title>
+  <title>กำลังพาคุณไปที่ Shopee...</title>
 
   <script>
     !function(f,b,e,v,n,t,s)
@@ -23,33 +23,61 @@
     setTimeout(() => {
       // อัปเดตลิงก์ตรงนี้
       window.location.href = "https://s.shopee.co.th/6AZAZjEvs9";
-    }, 800); // หน่วงเวลาเพื่อให้ Pixel ทำงาน
+    }, 1500); // หน่วงเวลาให้ Pixel ทำงานและผู้ใช้เห็นหน้าโหลดเล็กน้อย (ปรับเพิ่มเป็น 1.5 วินาที)
   </script>
 
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'Sukhumvit Set', 'Kanit', sans-serif; /* เพิ่มฟอนต์ไทยยอดนิยม */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background: #fff;
+      background: #fdfdfd; /* สีพื้นหลังขาวนวล */
       color: #333;
+      overflow: hidden; /* ป้องกัน scrollbar ในบางกรณี */
     }
+
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px; /* ระยะห่างระหว่าง loader กับข้อความ */
+    }
+
     .loader {
-      border: 5px solid #f3f3f3; /* สีเทาอ่อน */
-      border-top: 5px solid #f97300; /* สีส้ม Shopee */
+      border: 6px solid rgba(255, 115, 0, 0.2); /* สีเทาอ่อนโปร่งแสง */
+      border-top: 6px solid #f97300; /* สีส้ม Shopee */
       border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      width: 50px; /* ขยายขนาด loader */
+      height: 50px; /* ขยายขนาด loader */
       animation: spin 1s linear infinite;
-      margin-bottom: 20px;
     }
+
     h1 {
-      font-size: 20px;
+      font-size: 22px; /* ขยายขนาดข้อความ */
+      color: #1a1a1a; /* สีเข้มขึ้นเพื่อความชัดเจน */
+      margin: 0; /* ลบ margin เริ่มต้น */
+      text-align: center;
+      line-height: 1.4;
     }
+
+    p {
+        font-size: 16px;
+        color: #555;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .shopee-icon {
+        width: 60px; /* ขนาดไอคอน Shopee */
+        height: 60px;
+        margin-bottom: 20px; /* ระยะห่างจากข้อความ */
+    }
+
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -57,7 +85,11 @@
   </style>
 </head>
 <body>
-  <div class="loader"></div>
-  <h1>กำลังพาคุณไปยังหน้าสินค้า Shopee...</h1>
+  <div class="loader-container">
+    <img src="https://assets.shopee.co.th/web/static/images/shopee-logo-square.34d93ee6e77e6822a16d80119e7cf933.png" alt="Shopee Icon" class="shopee-icon">
+    <div class="loader"></div>
+  </div>
+  <h1>กำลังนำคุณไปยังหน้าสินค้าบน Shopee...</h1>
+  <p>โปรดรอสักครู่ ประสบการณ์ช้อปปิ้งที่ดีกำลังรอคุณอยู่!</p>
 </body>
 </html>
