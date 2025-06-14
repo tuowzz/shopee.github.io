@@ -23,7 +23,7 @@
     setTimeout(() => {
       // อัปเดตลิงก์ตรงนี้
       window.location.href = "https://s.shopee.co.th/6AZAZjEvs9";
-    }, 1500); // หน่วงเวลาให้ Pixel ทำงานและผู้ใช้เห็นหน้าโหลดเล็กน้อย (ปรับเพิ่มเป็น 1.5 วินาที)
+    }, 1500); // หน่วงเวลาให้ Pixel ทำงานและผู้ใช้เห็นหน้าโหลดเล็กน้อย (ปรับเป็น 1.5 วินาที)
   </script>
 
   <style>
@@ -55,6 +55,7 @@
       width: 50px; /* ขยายขนาด loader */
       height: 50px; /* ขยายขนาด loader */
       animation: spin 1s linear infinite;
+      margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง loader เล็กน้อย */
     }
 
     h1 {
@@ -72,12 +73,6 @@
         text-align: center;
     }
 
-    .shopee-icon {
-        width: 60px; /* ขนาดไอคอน Shopee */
-        height: 60px;
-        margin-bottom: 20px; /* ระยะห่างจากข้อความ */
-    }
-
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -86,7 +81,6 @@
 </head>
 <body>
   <div class="loader-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Shopee_logo.svg/1200px-Shopee_logo.svg.png" alt="Shopee Icon" class="shopee-icon">
     <div class="loader"></div>
   </div>
   <h1>กำลังนำคุณไปยังหน้าสินค้าบน Shopee...</h1>
